@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
@@ -49,3 +50,6 @@ def edit_task():
 
 if __name__ == '__main__':
     app.run(debug=True)
+=======
+ 
+>>>>>>> 0d71122b11ffe7c96faec4fd0c60149895fd93ee
