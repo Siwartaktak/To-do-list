@@ -1,0 +1,114 @@
+body {
+    padding-top: 20px;
+    background-color: #f4f7fc;
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    max-width: 900px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    font-size: 2.5em;
+    color: #c41a20;
+    text-align: center;
+    margin-bottom: 30px;
+}
+h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+.task-item:hover {
+    background-color: #f1f1f1;
+}
+.task-item input[type="checkbox"] {
+    margin-right: 15px;
+    cursor: pointer;
+}
+.task-item span {
+    flex-grow: 1;
+    font-size: 1.1em;
+}
+.task-item button {
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.task-item button:hover {
+    opacity: 0.8;
+}
+.btn-danger, .btn-warning, .btn-info {
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+.btn-danger:hover, .btn-warning:hover, .btn-info:hover {
+    opacity: 0.7;
+}
+/* Add Task Button */
+.btn-primary {
+    border-radius: 50px; /* Make the button round */
+    background-color: #c41a20; /* Red color */
+    color: white; /* Text color */
+
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Adjust padding for the button */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and scaling */
+}
+
+.btn-primary:hover {
+    background-color: #9b1610; /* Darker red on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+/* Timer Popup Styles */
+#timerPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+    width: 300px;
+}
+.popup-btn {
+    margin-top: 20px;
+}
+
+/* Edit Task Popup */
+#editTaskPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+    width: 300px;
+}

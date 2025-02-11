@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal To-Do List with Timer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/todolist.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Personal To-Do List with Timer</h1>
+       
+
+        <div class="form-group">
+            <label for="task">Add your task:</label>
+            <input type="text" class="form-control" id="task" placeholder="Enter your task">
+        </div>
+        <div class="form-group">
+            <label for="time">Specify the time needed for your task: (hh:mm)</label>
+            <input type="time" class="form-control" id="time">
+        </div>
+
+        <button class="btn btn-primary" onclick="addTask()">Add Task</button>
+ <hr>
+        <h3 class="mt-4">To-Do List</h3>
+        <ul id="task-list"></ul>
+    </div>
+
+    <!-- Timer Popup -->
+    <div id="timerPopup">
+        <h4>Task Timer</h4>
+        <div id="timerDisplay">00:00</div>
+        <button class="btn btn-success popup-btn" id="startPauseBtn" onclick="toggleTimer()">Start</button>
+        <button class="btn btn-danger popup-btn" onclick="stopTimer()">Stop</button>
+    </div>
+
+    <!-- Edit Task Popup -->
+    <div id="editTaskPopup">
+        <h4>Edit Task</h4>
+        <input type="text" id="editTask" class="form-control" placeholder="Task Name">
+        <input type="time" id="editTime" class="form-control" placeholder="Time">
+        <button class="btn btn-success" onclick="saveEdit()">Save</button>
+        <button class="btn btn-danger" onclick="closeEditPopup()">Cancel</button>
+    </div>
+</body>
+</html>
