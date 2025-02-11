@@ -24,7 +24,7 @@ First, clone the repository to your local machine:
 ```bash
 git clone https://github.com/Siwartaktak/To-do-list.git
 
- 2. Navigate to the project folder
+2. Navigate to the project folder
 cd To-do-list
 
 3. Set up a virtual environment (optional but recommended)
